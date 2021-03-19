@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 1000px;
+    height: 800px;
+    margin:150px auto;
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.box-price{
+    margin: 60px;
+    width: 100%;
+    text-align: left;
+
+
+}
+
+.box-price h3{
+    margin: 40px 350px 40px 0;
+    display: inline-block;
+}
+
