@@ -15,21 +15,29 @@ var etaUtenteNum= parseInt(etaUtente);
 // Crea la tariffa base:
 var prezzoBiglietto= kmUtenteNum * 0.21;
 var prezzoBigliettoSconto; 
+var scontoBigliettoMin= prezzoBiglietto * 0.20;
+var scontoBigliettoOver= prezzoBiglietto * 0.40;
 
 if (etaUtenteNum < 18){
 
-    prezzoBigliettoSconto = prezzoBiglietto - (prezzoBiglietto * 0.20);
-    alert ('Il Prezzo del biglietto sarebbe di ' + prezzoBiglietto + '€. Applicando Sconto minorenni in Totale spendi: '+ prezzoBigliettoSconto.toFixed(2) + '€.' );
+    prezzoBigliettoSconto = prezzoBiglietto - scontoBigliettoMin;
+    document.getElementById('total-price').innerHTML=  prezzoBiglietto.toFixed(2) + ' €';
+    document.getElementById('sales-price').innerHTML= '- ' + scontoBigliettoMin.toFixed(2) + ' €';
+    document.getElementById('final-price').innerHTML=  prezzoBigliettoSconto.toFixed(2) + ' €';
 
 }else if(etaUtenteNum >= 65){
 
-    prezzoBigliettoSconto = prezzoBiglietto - (prezzoBiglietto * 0.40);
-    alert ('Il Prezzo del biglietto sarebbe di ' + prezzoBiglietto + '€. Applicando Sconto OVER 65 in Totale spendi: '+ prezzoBigliettoSconto.toFixed(2) + '€.' );
+    prezzoBigliettoSconto = prezzoBiglietto - scontoBigliettoOver;
 
+    document.getElementById('total-price').innerHTML=  prezzoBiglietto.toFixed(2) + ' €';
+    document.getElementById('sales-price').innerHTML= '- ' + scontoBigliettoOver.toFixed(2) + ' €';
+    document.getElementById('final-price').innerHTML=  prezzoBigliettoSconto.toFixed(2) + ' €';
 }else {
 
-    document.getElementById('total-price').innerHTML= prezzoBiglietto;
+    document.getElementById('total-price').innerHTML=  prezzoBiglietto.toFixed(2) + ' €';
+    document.getElementById('final-price').innerHTML=  prezzoBiglietto.toFixed(2) + ' €';
 }
+
 
 
 

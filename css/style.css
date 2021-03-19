@@ -15,6 +15,10 @@
     border-radius: 25px;
     border: 1px solid black;
 }
+h1{
+    margin:30px 0;
+    text-transform: uppercase;
+}
 
 .box-price{
     margin: 60px;
@@ -27,5 +31,17 @@
 .box-price h3{
     margin: 40px 350px 40px 0;
     display: inline-block;
+    width: 200px;
 }
+
+span{
+    padding:10px 20px;
+}
+
+#final-price{
+    background-color: white;
+    border: 1px solid black;
+}
+
+
 
